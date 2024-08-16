@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div id="header3"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 p-0">
+                <div id="sidebar3"></div>
+            </div>
+            <div class="col-sm-10 p-0">
+                <div>
+                    <h3 class="text-center">About The Page</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum corporis quaerat assumenda
+                        debitis ad sit
+                        ipsam minus quae! Ab ipsam alias corporis exercitationem incidunt nesciunt provident sunt dolore
+                        laborum earum
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum est esse eaque repudiandae
+                        facilis rem ad
+                        distinctio non nihil. Dolorum deleniti ipsa ratione libero consequuntur qui modi maiores
+                        incidunt aut.</p>
+
+                    <img src="c08192495_1_9.avif" alt="no image" class="w-25">
+                    <hr>
+                    <div class="container border">
+                        <!-- <form action="http://localhost:8080/api/add" method="post">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" name="name" id="name" class="form-control w-25">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" id="email" class="form-control w-25">
+                            <div class="text-center">
+                                <button class="btn btn-success">Submit</button>
+                            </div>
+                        </form> -->
+
+                        <form>
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" name="name" id="name" class="form-control w-25">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" id="email" class="form-control w-25">
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+                 
+                  <div class="container bg-secondary-subtle justify-content-center">
+                    <h4 class="text-center p-4">Search The Things</h4>
+                    <input type="text" name="Search" id="Search">
+                    <ul>
+                        <li>Tv</li>
+                        <li>Led Tv</li>
+                        <li>Phone</li>
+                        <li>SmartPhone</li>
+                        <li>TelePhone</li>
+                        <li>Tab</li>
+                        <li>Ipad</li>
+                        <li>Radio</li>
+                        <li>TeleGram</li>
+                        <li>EarBuds</li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(function () {
+        $("#sidebar3").load("sidebar.html")
+        $("#header3").load("header.html")
+    })
+     
+    
+    // $(document).submit("button", function (e) {
+    //     e.preventDefault();
+    //     let name = $("#name").val();
+    //     let email = $("#email").val();
+    //     let data = {
+    //         "name": name,
+    //         "email": email
+    //     }
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "http://localhost:8080/api/add",
+    //         data: data,
+    //         dataType: "json",
+    //         success: function (res) {
+    //             console.log(res)
+                
+    //         }
+            
+    //     })
+        
+    // })
+
+    // function handleSubmit(){
+    //    let name=document.getElementById("name").value
+    //    let email=document.getElementById("email").value
+    
+    //    let data=[name,email]
+    
+    //     console.log(data)
+    // }
+    
+    
+    
+</script>
+
+</html>
