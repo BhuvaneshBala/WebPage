@@ -57,20 +57,20 @@
 
                 </div>
                  
-                  <div class="container bg-secondary-subtle justify-content-center">
-                    <h4 class="text-center p-4">Search The Things</h4>
-                    <input type="text" name="Search" id="Search">
-                    <ul>
-                        <li>Tv</li>
-                        <li>Led Tv</li>
-                        <li>Phone</li>
-                        <li>SmartPhone</li>
-                        <li>TelePhone</li>
-                        <li>Tab</li>
-                        <li>Ipad</li>
-                        <li>Radio</li>
-                        <li>TeleGram</li>
-                        <li>EarBuds</li>
+                  <div class="container bg-secondary-subtle d-grid justify-content-center m-5 w-25" style="position: absolute; left: 40%;">
+                    <h4 class="text-center p-2 m-0">Search The Things</h4>
+                    <input type="text" name="Search" id="Search" class="form-control">
+                    <ul class="list-group m-4 bg-secondary">
+                        <li class="list-group-item text-center bg-danger-subtle m-2">Tv</li>
+                        <li class="list-group-item text-center bg-danger-subtle m-2">Led Tv</li>
+                        <li class="list-group-item text-center bg-danger-subtle m-2">Phone</li>
+                        <li class="list-group-item text-center bg-danger-subtle m-2">SmartPhone</li>
+                        <li class="list-group-item text-center bg-danger-subtle m-2">TelePhone</li>
+                        <li class="list-group-item text-center bg-danger-subtle m-2">Tab</li>
+                        <li class="list-group-item text-center bg-danger-subtle m-2">Ipad</li>
+                        <li class="list-group-item text-center bg-danger-subtle m-2">Radio</li>
+                        <li class="list-group-item text-center bg-danger-subtle m-2">TeleGram</li>
+                        <li class="list-group-item text-center bg-danger-subtle m-2">EarBuds</li>
                     </ul>
                   </div>
             </div>
@@ -86,37 +86,50 @@
         $("#header3").load("header.html")
     })
      
-    
-    // $(document).submit("button", function (e) {
-    //     e.preventDefault();
-    //     let name = $("#name").val();
-    //     let email = $("#email").val();
-    //     let data = {
-    //         "name": name,
-    //         "email": email
-    //     }
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "http://localhost:8080/api/add",
-    //         data: data,
-    //         dataType: "json",
-    //         success: function (res) {
-    //             console.log(res)
-                
-    //         }
-            
-    //     })
-        
-    // })
+    $(document).ready(function(){
+    $("#Search").on('keyup', function() { 
+        let product = $("#Search").val().toLowerCase(); 
+        $("li").each(function() {
+            let itemText = $(this).text().toLowerCase(); 
+            if (itemText.indexOf(product) !== -1) {
+                $(this).css("display", "block");
+            } else {
+                $(this).css("display", "none"); 
+            }
+        });
+    });
+});
 
-    // function handleSubmit(){
-    //    let name=document.getElementById("name").value
-    //    let email=document.getElementById("email").value
+    $(document).submit("button", function (e) {
+        e.preventDefault();
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let data = {
+            "name": name,
+            "email": email
+        }
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/api/add",
+            data: data,
+            dataType: "json",
+            success: function (res) {
+                console.log(res)
+                
+            }
+            
+        })
+        
+    })
+
+    function handleSubmit(){
+       let name=document.getElementById("name").value
+       let email=document.getElementById("email").value
     
-    //    let data=[name,email]
+       let data=[name,email]
     
-    //     console.log(data)
-    // }
+        console.log(data)
+    }
     
     
     
